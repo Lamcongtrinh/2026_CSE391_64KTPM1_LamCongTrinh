@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+/* Container */
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border: 2px solid #ccc;
+}
+
+/* Title */
+.wrapper h2 {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Form layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each row */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Input & textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4aa3df;
+    background: #fff;
+}
+
+textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+/* Bottom row */
+.bottom {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background: #5cb3e6;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3399cc;
+}
+
+/* Note */
+.note {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .bottom {
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
