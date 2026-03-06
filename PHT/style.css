@@ -1,57 +1,177 @@
-
 /* TODO 1: Dùng universal selector để reset margin và padding về 0 cho toàn trang */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
-
-
 /* TODO 2: Dùng type selector cho body */
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f5f5f5;
 }
-
-
-
 /* TODO 3: Dùng ID selector cho #main-header */
 #main-header {
 	background-color: #333;
 	color: white;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 0;
+	margin-bottom: 0;
 }
 
+/* Header sticky */
+.sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
 
+/* Nút Scroll to Top */
+.scroll-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: #007bff;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 24px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+	transition: background 0.2s, transform 0.2s;
+}
 
+.scroll-top:hover {
+	background: #0056b3;
+	transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+	}
+}
+}
 /* TODO 4: Dùng class selector cho .nav-link */
 .nav-link {
 	color: #333;
 	text-decoration: none;
-	padding: 10px 15px;
+	padding: 10px 30px;
+	transition: all 0.2s;
+	font-size: 16px;
 }
-
-
 
 /* TODO 5: Dùng group selector cho h1, h2, h3 */
 h1, h2, h3 {
 	font-family: 'Georgia', serif;
 }
-
-
-
+/* TODO 6: Dùng descendant selector cho nav a */
 nav a {
 	display: inline-block;
 	margin: 0 10px;
 }
-
-
-
-a:hover {
-	color: #ff6600;
-	background-color: #eee;
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	background: #f8f9fa;
+	padding: 15px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+/* Bài tập Box Model & Layout Card */
+/* Bước 2: Style cho .posts container */
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 40px auto;
 }
 
+/* Bước 3: Style cho .card */
+.card {
+	flex: 1 1 300px;
+	border: 1px solid #ddd;
+	padding: 20px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	min-width: 250px;
+	max-width: 100%;
+}
+
+@media (max-width: 768px) {
+	.posts {
+		flex-direction: column;
+	}
+	.card {
+		flex: 1 1 100%;
+		min-width: unset;
+	}
+}
+
+/* Bước 4: Style cho .btn */
+.btn {
+	display: inline-block;
+	padding: 8px 16px;
+	background: #007bff;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background 0.2s;
+	margin-top: 10px;
+}
+
+.btn:hover {
+	background: #0056b3;
+}
+/* Gallery Grid Layout */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 16px;
+	max-width: 1200px;
+	margin: 40px auto;
+}
+
+.item {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	font-size: 2rem;
+	border-radius: 8px;
+}
+/* TODO 7: Dùng pseudo-class selector cho a:hover */
+a:hover {
+}
+.nav-link:hover {
+	color: #ff6600;
+	background-color: #eee;
+	border-radius: 4px;
+}
+
+.nav-link:active {
+	color: white;
+	background-color: #ff6600;
+	border-radius: 4px;
+}
+}
+
+footer {
+	text-align: center;
+	padding: 20px 0;
+	color: #333;
+	font-size: 15px;
+	margin-top: 40px;
+}
 
